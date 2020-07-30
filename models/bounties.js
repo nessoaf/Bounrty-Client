@@ -2,6 +2,7 @@
 const mongoose = require('mongoose')
 const { Module } = require('module')
 const { Bounty } = require('.')
+
 //create schema
 const bountySchema = new mongoose.Schema({
     name: {

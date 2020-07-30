@@ -3,7 +3,11 @@ const mongoose = require('mongoose')
 //set up mongoose connection
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/hunters',
-    { useNewUrlParser: true }
+    {
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+    }
 )
 let db = mongoose.connection
 
